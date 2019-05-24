@@ -5,10 +5,17 @@ class.Pengu.image=pengu-right.png
 dependency1.from=Pengu
 dependency1.to=Ground
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=722
 editor.fx.0.width=800
 editor.fx.0.x=640
 editor.fx.0.y=60
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+>>>>>>> eb695954eb855aeaa0819e3d9634765bfa1e89c8
 height=545
 package.numDependencies=1
 package.numTargets=3
@@ -49,5 +56,11 @@ target3.x=0
 target3.y=0
 version=3.0.0
 width=818
+<<<<<<< HEAD
 xPosition=681
 yPosition=140
+=======
+world.lastInstantiated=MyWorld
+xPosition=253
+yPosition=72
+>>>>>>> eb695954eb855aeaa0819e3d9634765bfa1e89c8

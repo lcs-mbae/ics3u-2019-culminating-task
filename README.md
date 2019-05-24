@@ -1,4 +1,4 @@
-# ics3u-2019-culminating-task
+# ICS3U 2019 Culminating Task
 
 Use this repository to complete your culminating task.
 
