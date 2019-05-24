@@ -69,7 +69,7 @@ public class Hero extends Actor
         horizontalDirection = FACING_RIGHT;
 
         // Set image
-        setImage("hero-jump-down-right.png");
+        setImage("hero-right.png");
 
         // Initialize the 'walking' arrays
         walkingRightImages = new GreenfootImage[COUNT_OF_WALKING_IMAGES];
@@ -307,11 +307,11 @@ public class Hero extends Actor
             // Set appropriate jumping image
             if (verticalDirection == JUMPING_UP)
             {
-                setImage("hero-jump-up-right.png");
+                setImage("hero-jump-up-left.png");
             }
             else
             {
-                setImage("hero-jump-down-right.png");
+                setImage("hero-jump-down-left.png");
             }
         }
 
