@@ -108,15 +108,15 @@ public class SideScrollingWorld extends World
         Fence fence1 = new Fence(x, y);
         addObject(fence1, x, y);
 
-        x = TILE_SIZE / 2 + TILE_SIZE * 6;
-        y = VISIBLE_HEIGHT - TILE_SIZE / 2 - TILE_SIZE;        
-        Fence fence2 = new Fence(x, y);
-        addObject(fence2, x, y);
+        //x = TILE_SIZE / 2 + TILE_SIZE * 6;
+        //y = VISIBLE_HEIGHT - TILE_SIZE / 2 - TILE_SIZE;        
+        //Fence fence2 = new Fence(x, y);
+        //addObject(fence2, x, y);
 
-        x = TILE_SIZE / 2 + TILE_SIZE * 7;
-        y = VISIBLE_HEIGHT - TILE_SIZE / 2 - TILE_SIZE;
-        Fence fence3 = new Fence(x, y);
-        addObject(fence3, x, y);
+        //x = TILE_SIZE / 2 + TILE_SIZE * 7;
+        //y = VISIBLE_HEIGHT - TILE_SIZE / 2 - TILE_SIZE;
+        //Fence fence3 = new Fence(x, y);
+        //addObject(fence3, x, y);
 
         // Two fences on right side of world
         x = SCROLLABLE_WIDTH - TILE_SIZE / 2 - TILE_SIZE * 3;
