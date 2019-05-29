@@ -46,6 +46,7 @@ public class SideScrollingWorld extends World
 
         // Game on
         isGameOver = false;
+        
     }
 
     /**
@@ -59,13 +60,13 @@ public class SideScrollingWorld extends World
         addClouds();
         addRightGround();
         addHero();
-       for (int i = 0; i<=4; i +=1)
-        {
-          int x = TILE_SIZE + HALF_TILE_SIZE + i * TILE_SIZE;
-          int y = 4*TILE_SIZE + HALF_TILE_SIZE;
-          MetalPlate plate = new MetalPlate (x,y);
-          addObject(plate,x,y); 
-        }
+       //for (int i = 0; i<=4; i +=1)
+        //{
+          //int x = TILE_SIZE + HALF_TILE_SIZE + i * TILE_SIZE;
+          //int y = 4*TILE_SIZE + HALF_TILE_SIZE;
+          //MetalPlate plate = new MetalPlate (x,y);
+          //addObject(plate,x,y); 
+        //}
     }
 
     /**
@@ -82,7 +83,7 @@ public class SideScrollingWorld extends World
         {
             // Add ground objects at bottom of screen
             // NOTE: Actors are added based on their centrepoint, so the math is a bit trickier.
-            int x = i * TILE_SIZE + TILE_SIZE / 2;
+            int x = i * HALF_TILE_SIZE + TILE_SIZE / 2;
             int y = getHeight() - TILE_SIZE / 2;
 
             // Create a ground tile
@@ -104,9 +105,11 @@ public class SideScrollingWorld extends World
     {
         // Three fences on left side of world
         int x = TILE_SIZE / 2 + TILE_SIZE * 5;
-        int y = VISIBLE_HEIGHT - TILE_SIZE / 2 - TILE_SIZE;
+        int y = VISIBLE_HEIGHT - TILE_SIZE / 4 - TILE_SIZE;
         Fence fence1 = new Fence(x, y);
+        
         addObject(fence1, x, y);
+        
 
         //x = TILE_SIZE / 2 + TILE_SIZE * 6;
         //y = VISIBLE_HEIGHT - TILE_SIZE / 2 - TILE_SIZE;        
@@ -119,12 +122,12 @@ public class SideScrollingWorld extends World
         //addObject(fence3, x, y);
 
         // Two fences on right side of world
-        x = SCROLLABLE_WIDTH - TILE_SIZE / 2 - TILE_SIZE * 3;
+        x = SCROLLABLE_WIDTH - TILE_SIZE / 4 - TILE_SIZE * 2;
         y = VISIBLE_HEIGHT / 2;
         Fence fence4 = new Fence(x, y);
         addObject(fence4, x, y);
 
-        x = SCROLLABLE_WIDTH - TILE_SIZE / 2 - TILE_SIZE * 4;
+        x = SCROLLABLE_WIDTH - TILE_SIZE / 4 - TILE_SIZE * 3;
         y = VISIBLE_HEIGHT / 2;
         Fence fence5 = new Fence(x, y);
         addObject(fence5, x, y);
@@ -153,6 +156,7 @@ public class SideScrollingWorld extends World
                 addObject(plate, x, y);
             }
         }
+        
     }
 
     /**
@@ -229,6 +233,13 @@ public class SideScrollingWorld extends World
                 addObject(groundBelow, x, y);
             }
         }
+        for (int i = 0; i<=9; i +=1)
+        {
+          int x = 51*TILE_SIZE + HALF_TILE_SIZE + i * TILE_SIZE;
+          int y = 8*TILE_SIZE + HALF_TILE_SIZE;
+          MetalPlate plate = new MetalPlate (x,y);
+          addObject(plate,x,y); 
+        }
     }
 
     /**
@@ -239,7 +250,7 @@ public class SideScrollingWorld extends World
         return theHero;
     }
 
-    /**
+      /**
      * Set game over
      */
     public void setGameOver()
