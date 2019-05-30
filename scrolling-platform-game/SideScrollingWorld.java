@@ -30,6 +30,12 @@ public class SideScrollingWorld extends World
 
     // Track whether game is on
     private boolean isGameOver;
+    private int Time = 0;
+    private int Life = 1;
+    //track whether enemy is being touched
+    private boolean isTouchingEnemy;
+    
+    
 
     /**
      * Constructor for objects of class SideScrollingWorld.
@@ -60,6 +66,7 @@ public class SideScrollingWorld extends World
         addClouds();
         addRightGround();
         addHero();
+        
        //for (int i = 0; i<=4; i +=1)
         //{
           //int x = TILE_SIZE + HALF_TILE_SIZE + i * TILE_SIZE;
@@ -76,7 +83,7 @@ public class SideScrollingWorld extends World
     {
         
         // How many tiles will cover the bottom of the initial visible area of screen?
-        final int tilesToCreate = getWidth() / TILE_SIZE;
+        final int tilesToCreate = 2*getWidth() / TILE_SIZE;
 
         // Loop to create and add the tile objects
         for (int i = 0; i < tilesToCreate; i += 1)
@@ -92,6 +99,7 @@ public class SideScrollingWorld extends World
             // Add the objects
             addObject(groundTile, x, y);
         }
+        
         
         
     }
@@ -179,6 +187,16 @@ public class SideScrollingWorld extends World
      */
     public void act()
     {
+        // Score added 60 each second
+        Time = Time + 1;
+        
+        //SideScrollingWorld world = (SideScrollingWorld) getWorld();
+        showText ("Life :" + Life, 440,40);
+        showText ("Time :" + Time,40,40); 
+        
+        
+      
+        
     }
 
     /**
@@ -230,12 +248,12 @@ public class SideScrollingWorld extends World
 
                 // Create object and add it
                 GroundBelow groundBelow = new GroundBelow(x, y);
-                addObject(groundBelow, x, y);
+                addObject(groundBelow, x, y);   
             }
         }
         for (int i = 0; i<=9; i +=1)
         {
-          int x = 51*TILE_SIZE + HALF_TILE_SIZE + i * TILE_SIZE;
+          int x =  51*TILE_SIZE + HALF_TILE_SIZE + i * TILE_SIZE;
           int y = 8*TILE_SIZE + HALF_TILE_SIZE;
           MetalPlate plate = new MetalPlate (x,y);
           addObject(plate,x,y); 
