@@ -27,6 +27,8 @@ public class SideScrollingWorld extends World
 
     // Hero
     Hero theHero;
+    //Enemy
+    Enemy theEnemy;
 
     // Track whether game is on
     private boolean isGameOver;
@@ -34,6 +36,7 @@ public class SideScrollingWorld extends World
     private int Life = 1;
     //track whether enemy is being touched
     private boolean isTouchingEnemy;
+    
     
     
 
@@ -66,6 +69,7 @@ public class SideScrollingWorld extends World
         addClouds();
         addRightGround();
         addHero();
+        addEnemy();
         
        //for (int i = 0; i<=4; i +=1)
         //{
@@ -195,6 +199,7 @@ public class SideScrollingWorld extends World
         showText ("Time :" + Time,40,40); 
         
         
+        
       
         
     }
@@ -212,6 +217,14 @@ public class SideScrollingWorld extends World
 
         // Add hero in bottom left corner of screen
         addObject(theHero, initialX, getHeight() / 4 * 3);
+    }
+    
+    private void addEnemy()
+    {
+        theEnemy = new Enemy();
+        addObject(theEnemy, 700,400);
+        
+    
     }
 
     /**
